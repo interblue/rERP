@@ -1,0 +1,59 @@
+:root {
+  --border-radius: 0.25rem;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+body {
+  background-color: #eee;
+  padding: 1rem;
+}
+
+button, input, select, textarea {
+  /* appearance: none; */
+  border: 1px solid #666;
+  border-radius: var(--border-radius);
+  padding: 0 0.5rem;
+  transition: outline .15s ease-in-out;
+}
+
+button:focus, input:focus, select:focus, textarea:focus {
+  outline: 0.2rem solid #86b7fe;
+}
+
+input[type="file"] {
+  background-color: white;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+label:has(input:required)::before {
+  box-sizing: border-box;
+  content: "*";
+  color: red;
+}
+
+table.list {
+  background-color: white;
+  border: 1px solid #333;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.list tbody tr th {
+  background-color: #eee;
+}
+
+table.list tbody tr th, td {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+}
