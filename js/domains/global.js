@@ -1,4 +1,4 @@
-const __global__ = {
+const __ib_global__ = {
   PRJ_CHRG_GRP_NM: {
     Header: '과제담당자',
     Type: 'Text',

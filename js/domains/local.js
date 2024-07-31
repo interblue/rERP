@@ -1,4 +1,4 @@
-const __local__ = {
+const __ib_local__ = {
   // 홍익대학교
   UNIV_11: {
     PRJ_NO: {

@@ -313,18 +313,18 @@ ib.def = {
 
     // 컬럼 정보에 domain 정보 추가
     for (let col of colDefs) {
-      let __global = __global__[col.Name];
-      let __local = __local__['UNIV_10']
-        ? __local__['UNIV_10'][col.Name]
+      let __ib_global = __ib_global__[col.Name];
+      let __ib_local = __ib_local__['UNIV_10']
+        ? __ib_local__['UNIV_10'][col.Name]
         : null;
       // global domain 이 없는 경우 warn
-      if (!__global) {
+      if (!__ib_global) {
         console.warn(`[${col.Name}] DOMAIN NOT FOUND`);
         result.push(col);
       } else {
         // 우선순위 : colDefs > local domain > global domain
-        if (!!__local) Object.assign(__global, __local);
-        result.push(Object.assign(__global, col));
+        if (!!__ib_local) Object.assign(__ib_global, __ib_local);
+        result.push(Object.assign(__ib_global, col));
       }
     }
 

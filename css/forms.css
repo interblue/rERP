@@ -1,5 +1,6 @@
 :root {
   --border-radius: 0.25rem;
+  --clr-warning: red;
 }
 
 * {
@@ -30,6 +31,14 @@ input[type="file"] {
   background-color: white;
 }
 
+input[type="url"]:valid {
+  outline: 0.2rem solid greenyellow;
+}
+
+input[type="url"]:invalid {
+  outline: 0.2rem solid var(--clr-warning);
+}
+
 input::placeholder {
   color: #888;
 }
@@ -37,7 +46,7 @@ input::placeholder {
 label:has(input:required)::before {
   box-sizing: border-box;
   content: "*";
-  color: red;
+  color: var(--clr-warning);
 }
 
 table.list {
